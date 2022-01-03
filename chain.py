@@ -1,7 +1,5 @@
 from bloc import Bloc
-from flask import Flask
 import requests
-
 
 class Chain:
 
@@ -39,14 +37,6 @@ class Chain:
         return "{" + \
                 ",".join([f"\"{x.index}\": {str(x)}" for x in self.chain]) + \
                 "}\n"
-
-    # #This will return the Chain in a JSON format
-    # def __str__(self):
-    #     return "{"+\
-    #             ",".join(["\"{index}\": {bloc}".format(index=x.index,
-    #                                                    bloc=str(x)
-    #                                                    ) for x in self.chain]) +\
-    #             "}"
 
     def consensus(self):
         for node in self.nodes:

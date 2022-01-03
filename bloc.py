@@ -2,9 +2,6 @@ import hashlib
 import random
 import time
 
-import timestamp as timestamp
-
-
 class Bloc:
 
     def __init__(self, index, previous_bloc_hash=None, timestamp=None,  proof=None):
@@ -12,7 +9,6 @@ class Bloc:
         self.previousBlocHash = previous_bloc_hash
         self.creationTimestamp = int(time.time()) if timestamp is None else timestamp
         self.transactions = []
-        # self.maxNumberOfTransactions = max_number_of_transactions
         self.proof = 0 if proof is None else proof
         print("init bloc")
 

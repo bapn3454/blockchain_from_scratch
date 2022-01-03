@@ -7,4 +7,4 @@ class Transaction:
         self.receiver = receiver
 
     def __str__(self):
-        return str(self.__dict__)#.replace("'",'"')
+        return str(self.__dict__)

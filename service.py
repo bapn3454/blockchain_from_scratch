@@ -1,4 +1,4 @@
-from flask import Flask, app
+from flask import app
 from chain import Chain
 
 demo = Chain(5)
